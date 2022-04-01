@@ -20,7 +20,7 @@
               Date of Arrival: <%=visit.date_of_arrival%>
             </li>
           </ul>
-          <%= link_to 'Delete', visitor_path(visit), method: :delete, data:{confirm:"are you sure?"} %>
+          <%= link_to 'Delete', delete_path(:id => visit.id), :method => :delete %>
           <%= link_to 'Update', edit_visitor_path(visit)%>
           <%= link_to 'show', visitor_path(visit)%>
       </li> 

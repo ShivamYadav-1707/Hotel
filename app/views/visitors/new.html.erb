@@ -1,28 +1,5 @@
-<!--<%= form_with scope: :visitor, url:visitors_path,local:true do|f|%>
-  <p>
-    <%= f.label:name, style: "display: block"%>
-    <%= f.text_area:name %>
-  </p>
-  <p>
-    <%= f.label:room_no, style: "display: block" %>
-    <%= f.text_area:room_no %>
-  </p>
-  <p>
-    <%= f.label:description, style: "display: block"%>
-    <%= f.text_area:description %>
-  </p>
-  <p>
-    <%= f.label:date_of_arrival, style: "display: block"%>
-    <%= f.text_area:date_of_arrival %>
-  </p>
-  <p>
-    <%= f.submit%>
-  </p>
-  <%=link_to "Home",'/'%>-->
 
   <h1>Enter the details of the visitors</h1>
   <%= render 'form' %>
 
 <%= link_to 'Cancel and return to listing', '/visitors' %>
-
-<%end%>

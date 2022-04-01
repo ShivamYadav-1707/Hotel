@@ -1,7 +1,8 @@
 <% if @visitors.errors.any? %>
 <h2>Following error stopped visitor details from being saved</h2>
 <ul>
-  <%@visitors.error.full_messages.each do|msg|%>
+  <%=@visitors.errors.full_messages.each do|msg|%>
+  <% byebug %>
   <li><%= msg %></li>
   
   <%end%>

@@ -20,6 +20,7 @@ class VisitorsController < ApplicationController
       flash[:notice]="Entry of new visitor is made successfully"
       redirect_to @visitors
     else
+      flash.now[:notice] = "Post can not be saved, please enter information."
       render 'new' 
     end
   end
