@@ -1,0 +1,32 @@
+
+<p style="color: green"><%= notice %></p>
+<h1>Details of all visitors</h1>
+<div>
+  <ol>
+  <% @visitors.each do|visit|%>
+    <p>
+      <li>
+          <ul>
+            <li>
+              Name: <%=visit.name%>
+            </li>
+            <li>
+              Room Number: <%=visit.room_no%>
+            </li>
+            <li>
+              Details: <%=visit.description%>
+            </li>
+            <li>
+              Date of Arrival: <%=visit.date_of_arrival%>
+            </li>
+          </ul>
+          <%= link_to 'Delete', visitor_path(visit), method: :delete, data:{confirm:"are you sure?"} %>
+          <%= link_to 'Update', edit_visitor_path(visit)%>
+          <%= link_to 'show', visitor_path(visit)%>
+      </li> 
+    </p>
+  <%end%>
+  </ol>
+  <%=link_to 'Create a new Entry', new_visitor_path%>
+  <%=link_to "Home",'/'%>
+</div>

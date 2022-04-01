@@ -1,0 +1,37 @@
+<% if @visitors.errors.any? %>
+<h2>Following error stopped visitor details from being saved</h2>
+<ul>
+  <%@visitors.error.full_messages.each do|msg|%>
+  <li><%= msg %></li>
+  
+  <%end%>
+  </ul>
+<%end%>
+
+
+
+<%= form_with(model: @visitors, local: true) do|f|%>
+  <p>
+    <%= f.label :name, style: "display: block"%>
+    <%= f.text_area :name %>
+  </p>
+  <p>
+    <%= f.label :room_no, style: "display: block" %>
+    <%= f.text_area :room_no %>
+  </p>
+  <p>
+    <%= f.label :description, style: "display: block"%>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :date_of_arrival, style: "display: block"%>
+    <%= f.text_area :date_of_arrival %>
+  </p>
+  <p>
+    <%= f.submit%>
+  </p>
+  <%end%>
+  <%= link_to "Home",'/' %>
+
+
+

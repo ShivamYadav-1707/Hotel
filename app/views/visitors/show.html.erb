@@ -1,0 +1,8 @@
+<h1><strong>Guest <%=@visitors.name%> Details</strong></h1>
+<p><strong>Room No- <%=@visitors.room_no%></strong></p>
+<p><strong>Details <%=@visitors.description%></strong></p>
+<p><strong>Date of Arrival <%=@visitors.date_of_arrival%></strong></p>
+<%= link_to 'Delete', visitor_path(@visitors), method: :delete, data:{confirm:"are you sure?"} %>
+<%= link_to 'Update', edit_visitor_path(@visitors)%>
+<%=link_to "Home",'/'%>
+<%=link_to "Visit back to the list",'/visitors'%>
